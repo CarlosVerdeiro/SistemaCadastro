@@ -31,7 +31,9 @@ As principais tecnologias e linguagens utilizadas neste projeto são:
 A estrutura de diretórios do projeto está organizada da seguinte forma:
 
 ├── banco/
+
 │ └── banco.sql
+
 ├── clientes/
 │ ├── action_cliente.php
 │ ├── alterar_cliente.php
