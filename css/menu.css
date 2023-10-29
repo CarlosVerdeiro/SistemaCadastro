@@ -1,0 +1,22 @@
+#imgUser{
+    width: 50px;
+}
+
+#liMenu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sectionPrincipal{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#desconectar {
+    right: 0;
+}

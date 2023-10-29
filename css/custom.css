@@ -1,0 +1,22 @@
+fieldset{margin:1% auto;}
+table{ margin-top: 20px;}	
+.box-mensagem-crud{ margin-top: 10px;}
+.msg-erro{ color: red; }
+.centralTotal{display: flex; align-items: center;justify-content: center;text-align: center;}
+.coluna{flex-direction: column;}
+.linha{flex-direction: row;}
+#action{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+td{
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+header{
+    width: 100%;
+}
