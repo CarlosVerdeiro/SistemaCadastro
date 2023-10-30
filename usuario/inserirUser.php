@@ -23,16 +23,18 @@ function verificacao($email, $conexao)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verifique se o email existe
     if (verificacao($email, $conexao) == true) {
-        echo '<script>event.preventDefault();</script>';
-        header('Location: ' . 'cadastroUsuario.php');
+        echo '<script>alert("Email já existente! Por favor, corrija e tente novamente.");</script>';
+        echo '<script>window.location = "cadastroUsuario.php";</script>';
         die();
     } else {
-        $senhaCrip = password_hash($senha, PASSWORD_DEFAULT); //Criptografia de senha
+        $senhaCrip = password_hash($senha, PASSWORD_DEFAULT); // Criptografia de senha
 
         $stm = $conexao->prepare("INSERT INTO usuario (nome,email,senha) VALUES (?,?,?);");
         $stm->execute([$nome, $email, $senhaCrip]);
         header('Location: ' . '/index.php');
     }
 }
+
+
 
 ?>

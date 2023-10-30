@@ -1,3 +1,35 @@
+<?php
+session_start(); // Inicie a sessão, se ainda não estiver iniciada
+
+$nome = 'Usuário';
+
+// Verifique se o usuário está logado (verifique se a variável de sessão 'user_id' existe)
+if (isset($_SESSION['user_id'])) {
+    $id = $_SESSION['user_id'];
+
+    // Agora você pode usar o $id da sessão para buscar o nome do usuário no banco de dados
+    try {
+        $conexao = new PDO('mysql:host=localhost;dbname=banco', 'root', '');
+        $sql = "SELECT nome FROM usuario WHERE id = :id";
+        $stm = $conexao->prepare($sql);
+        $stm->bindParam(':id', $id, PDO::PARAM_INT);
+        $stm->execute();
+
+        $result = $stm->fetch(PDO::FETCH_ASSOC);
+
+        if ($result) {
+            $nome = $result["nome"];
+        }
+    } catch (PDOException $e) {
+        echo "Erro de conexão com o banco de dados: " . $e->getMessage();
+    }
+} else {
+    session_destroy(); // Encerra a sessão
+    header('Location: index.php'); // Redirecione para a página de login, por exemplo.
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -10,27 +42,6 @@
     <link rel="stylesheet" href="/css/custom.css">
     <title> Cadastro</title>
 </head>
-<?php
-
-$nome = 'Usuário';
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    $id = $_POST['id'];
-
-    $conexao = new PDO('mysql:host=localhost;dbname=banco', 'root', '');
-    $sql = "SELECT nome FROM usuario WHERE id = '$id'";
-    $stm = $conexao->prepare($sql);
-    $stm->execute();
-    
-    $result = $stm->fetchAll(PDO::FETCH_ASSOC);
-    
-    foreach ($result as $row) {
-        $nome = $row["nome"];
-    }
-
-}
-?>
 
 <body style="background-image: url('https://i.pinimg.com/originals/ab/dc/59/abdc59c933a70920864a605b2f4bff1c.png'); background-repeat: no-repeat; background-position: center; background-position-y: center; background-attachment:fixed;">
     <header>
