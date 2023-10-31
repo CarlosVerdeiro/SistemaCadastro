@@ -14,6 +14,9 @@ O projeto inclui as seguintes funcionalidades essenciais para um sistema de cada
 - Cadastro de Fornecedores
 - Exclusão de Registros
 - Consulta de Registros
+- Controle de Sessão (em desenvolvimento) 
+- Criptografia de Senha do Usuário 
+- Login e Cadastro de Usuário 
 
 ## Tecnologias Utilizadas
 
