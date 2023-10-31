@@ -54,7 +54,7 @@ A estrutura de diretórios do projeto está organizada da seguinte forma:
 ├── templates/\
 │ └── nav.php\
 ├── index.php\
-└── README.md\
+└── README.md
 
 ## Configuração
 
