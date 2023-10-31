@@ -30,31 +30,31 @@ As principais tecnologias e linguagens utilizadas neste projeto são:
 
 A estrutura de diretórios do projeto está organizada da seguinte forma:
 
-├── banco/
-│ └── banco.sql
-├── clientes/
-│ ├── action_cliente.php
-│ ├── alterar_cliente.php
-│ ├── cadastro_cliente.php
-│ ├── edicao_cliente.php
-│ ├── excluir_cliente.php
-│ └── inserir_cliente.php
-├── css/
-│ ├── bootstrap.min.css
-│ └── custom.css
-├── fornecedores/
-│ ├── action_fornecedor.php
-│ ├── alterar_fornecedor.php
-│ ├── cadastro_fornecedor.php
-│ ├── edicao_fornecedor.php
-│ ├── excluir_fornecedor.php
-│ └── inserir_fornecedor.php
-├── js/
-│ └── custom.js
-├── templates/
-│ └── nav.php
-├── index.php
-└── README.md
+├── banco/\
+│ └── banco.sql\
+├── clientes/\
+│ ├── action_cliente.php\
+│ ├── alterar_cliente.php\
+│ ├── cadastro_cliente.php\
+│ ├── edicao_cliente.php\
+│ ├── excluir_cliente.php\
+│ └── inserir_cliente.php\
+├── css/\
+│ ├── bootstrap.min.css\
+│ └── custom.css\
+├── fornecedores/\
+│ ├── action_fornecedor.php\
+│ ├── alterar_fornecedor.php\
+│ ├── cadastro_fornecedor.php\
+│ ├── edicao_fornecedor.php\
+│ ├── excluir_fornecedor.php\
+│ └── inserir_fornecedor.php\
+├── js/\
+│ └── custom.js\
+├── templates/\
+│ └── nav.php\
+├── index.php\
+└── README.md\
 
 ## Configuração
 
